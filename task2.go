@@ -45,12 +45,12 @@ func main() {
 				if empls[i] == nil {
 					empls[i] = empl
 					added = true
-					fmt.Println("✅ Сотрудник успешно добавлен!")
+					fmt.Println(" Сотрудник успешно добавлен!")
 					break
 				}
 			}
 			if !added {
-				fmt.Println("❌ База сотрудников переполнена (достигнут лимит 512)!")
+				fmt.Println(" База сотрудников переполнена (достигнут лимит 512)!")
 			}
 
 		case 2:
@@ -63,12 +63,12 @@ func main() {
 				if empls[i] != nil && empls[i].Name == nameToDelete {
 					empls[i] = nil
 					deleted = true
-					fmt.Println("✅ Сотрудник", nameToDelete, "успешно удален!")
+					fmt.Println(" Сотрудник", nameToDelete, "успешно удален!")
 					break
 				}
 			}
 			if !deleted {
-				fmt.Println("❌ Сотрудник с таким именем не найден.")
+				fmt.Println(" Сотрудник с таким именем не найден.")
 			}
 
 		case 3:
@@ -91,7 +91,7 @@ func main() {
 			return
 
 		default:
-			fmt.Println("❌ Неизвестная команда. Введите число от 1 до 4.")
+			fmt.Println(" Неизвестная команда. Введите число от 1 до 4.")
 		}
 	}
 }
